@@ -51,15 +51,15 @@ public class StudentInfoActivity extends AppCompatActivity {
                     String mojePrezime = i.getExtras().getString("prezime");
                     String datum = i.getExtras().getString("datum");
 
-                    sZapis = mojeIme + " " + mojePrezime + " (" + datum +") ";
-
                     Intent inn = new Intent(StudentInfoActivity.this, SummaryActivity.class);
-                    inn.putExtra("zapisUnosa", sZapis);
                     inn.putExtra("predmet", sPredmet);
                     inn.putExtra("profesor", sProf);
                     inn.putExtra("akGod", sAkGod);
                     inn.putExtra("predavanja", sPredavanja);
                     inn.putExtra("lv", sLv);
+                    inn.putExtra("ime", mojeIme);
+                    inn.putExtra("prezime", mojePrezime);
+                    inn.putExtra("datum", datum);
 
                     startActivity(inn);
                 }

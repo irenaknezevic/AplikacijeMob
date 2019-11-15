@@ -11,7 +11,14 @@ import android.widget.TextView;
 public class SummaryActivity extends AppCompatActivity {
 
     private Button oBtnPocetna;
-    private TextView tv;
+    private TextView ime;
+    private TextView prezime;
+    private TextView datum_rodenja;
+    private TextView predmet;
+    private TextView profesor;
+    private TextView ak_godina;
+    private TextView br_predavanja;
+    private TextView br_labosa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +26,37 @@ public class SummaryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_summary);
 
         Intent iN = getIntent();
-        String mojZapis = iN.getExtras().getString("zapisUnosa");
-        tv =  (TextView)findViewById(R.id.tvZapis);
-        tv.setText(mojZapis);
+        String sIme = iN.getExtras().getString("ime");
+        ime =  (TextView)findViewById(R.id.mojeIme);
+        ime.setText(sIme);
+
+        String sPrezime = iN.getExtras().getString("prezime");
+        prezime =  (TextView)findViewById(R.id.mojePrezime);
+        prezime.setText(sPrezime);
+
+        String sDatum = iN.getExtras().getString("datum");
+        datum_rodenja =  (TextView)findViewById(R.id.mojeRodenje);
+        datum_rodenja.setText(sDatum);
+
+        String sPredmet = iN.getExtras().getString("predmet");
+        predmet =  (TextView)findViewById(R.id.predmet);
+        predmet.setText(sPredmet);
+
+        String sProfesor = iN.getExtras().getString("profesor");
+        profesor =  (TextView)findViewById(R.id.imeProfesora);
+        profesor.setText(sProfesor);
+
+        String sAkGodina = iN.getExtras().getString("akGod");
+        ak_godina =  (TextView)findViewById(R.id.akademskaGod);
+        ak_godina.setText(sAkGodina);
+
+        String sPredavanja = iN.getExtras().getString("predavanja");
+        br_predavanja =  (TextView)findViewById(R.id.brojPredavanja);
+        br_predavanja.setText(sPredavanja);
+
+        String sLabosi = iN.getExtras().getString("lv");
+        br_labosa =  (TextView)findViewById(R.id.brojLv);
+        br_labosa.setText(sLabosi);
 
         oBtnPocetna = (Button)findViewById(R.id.buttonPocetna);
 
