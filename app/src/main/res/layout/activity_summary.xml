@@ -28,7 +28,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Ime: " />
+        android:text="@string/ime" />
 
 
     <TextView
@@ -53,7 +53,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Prezime: " />
+        android:text="@string/prezime" />
 
 
     <TextView
@@ -78,7 +78,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Datum rođenja: " />
+        android:text="@string/datum_rodenja" />
 
     <TextView
         android:id="@+id/mojeRodenje"
@@ -102,7 +102,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Predmet: " />
+        android:text="@string/predmet" />
 
     <TextView
         android:id="@+id/predmet"
@@ -126,7 +126,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Profesor: " />
+        android:text="@string/profesor" />
 
     <TextView
         android:id="@+id/imeProfesora"
@@ -150,7 +150,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Ak. godina: " />
+        android:text="@string/akademska_godina" />
 
     <TextView
         android:id="@+id/akademskaGod"
@@ -174,7 +174,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Broj sati predavanja: " />
+        android:text="@string/sati_predavanja" />
 
     <TextView
         android:id="@+id/brojPredavanja"
@@ -198,7 +198,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Broj sati labosa: " />
+        android:text="@string/sati_labosa" />
 
     <TextView
         android:id="@+id/brojLv"

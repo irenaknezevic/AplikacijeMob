@@ -1,52 +1,68 @@
 package com.example.mojaaplikacija;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.Spinner;
 
-import com.google.android.material.textfield.TextInputEditText;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-
-    private Button oBtnDalje;
-    private String sIme;
-    private String sPrezime;
-    private String sDatum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        oBtnDalje = (Button)findViewById(R.id.buttonDalje);
-        oBtnDalje.setOnClickListener(new View.OnClickListener() {
+        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.jezik, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+
+        final Button button = (Button)findViewById(R.id.dalje);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View y) {
-                TextInputEditText oInputIme = (TextInputEditText)findViewById(R.id.ime);
-                TextInputEditText oInputPrezime = (TextInputEditText)findViewById(R.id.prezime);
-                EditText oEditTextDatum = (EditText)findViewById(R.id.etUnos);
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
+                String local = parent.getSelectedItem().toString();
+                local = local.substring(local.indexOf("(")+1, local.indexOf(")"));
 
-                sIme = oInputIme.getText().toString();
-                sPrezime = oInputPrezime.getText().toString();
-                sDatum = oEditTextDatum.getText().toString();
+                setLocal(local);
 
+                ActionBar naziv = getSupportActionBar();
+                naziv.setTitle(R.string.app_name);
 
-                if(sIme.matches("") && sPrezime.matches("") && sDatum.matches("")) {
+                button.setText(R.string.dalje);
+            }
 
-                }
-                else {
-                    Intent in = new Intent(MainActivity.this, StudentInfoActivity.class);
-                    in.putExtra("ime", sIme);
-                    in.putExtra("prezime", sPrezime);
-                    in.putExtra("datum", sDatum);
-                    startActivity(in);
-                }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, PersonalInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void setLocal(String jezik) {
+        Locale loc = new Locale(jezik);
+        Locale.setDefault(loc);
+
+        Configuration config = new Configuration();
+        config.locale = loc;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
     }
 }

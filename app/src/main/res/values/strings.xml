@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Moja Aplikacija</string>
+    <string name="ime">Ime:</string>
+    <string name="prezime">Prezime:</string>
+    <string name="datum_rodenja">Datum rođenja:</string>
+    <string name="dalje">Dalje</string>
+    <string name="predmet">Predmet:</string>
+    <string name="profesor">Profesor:</string>
+    <string name="akademska_godina">Akademska godina:</string>
+    <string name="sati_predavanja">Sati predavanja:</string>
+    <string name="sati_labosa">Sati labosa:</string>
+    <string name="pocetna">Početna</string>
+
+    <string-array name="jezik">
+        <item name="hr">Hrvatski (hr)</item>
+        <item name="en">English (en)</item>
+        <item name="hu">Magyar (hu)</item>
+    </string-array>
 </resources>

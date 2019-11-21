@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:hint="Predmet:" />
+            android:hint="@string/predmet" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,7 +44,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Profesor:"/>
+        android:text="@string/profesor"/>
 
     <EditText
         android:id="@+id/profIme"
@@ -53,7 +53,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputPredmet"
         app:layout_constraintStart_toEndOf="@+id/prof"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:text=""/>
 
     <TextView
         android:id="@+id/akGod"
@@ -65,7 +66,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Akademska godina:"/>
+        android:text="@string/akademska_godina"/>
 
     <EditText
         android:id="@+id/editAkGod"
@@ -87,7 +88,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Sati predavanja:" />
+        android:text="@string/sati_predavanja" />
 
     <EditText
         android:id="@+id/etSatiPredavanja"
@@ -109,7 +110,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Sati LV:"/>
+        android:text="@string/sati_labosa"/>
 
     <EditText
         android:id="@+id/etSatiLv"
@@ -131,6 +132,6 @@
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="Dalje" />
+        android:text="@string/dalje" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

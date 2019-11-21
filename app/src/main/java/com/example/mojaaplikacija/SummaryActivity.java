@@ -63,7 +63,7 @@ public class SummaryActivity extends AppCompatActivity {
         oBtnPocetna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pocetna = new Intent(SummaryActivity.this, MainActivity.class);
+                Intent pocetna = new Intent(SummaryActivity.this, PersonalInfoActivity.class);
                 pocetna.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(pocetna);
             }

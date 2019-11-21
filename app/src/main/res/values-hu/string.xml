@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Az alkalmazásom</string>
+    <string name="ime">Név:</string>
+    <string name="prezime">Vezetéknév:</string>
+    <string name="datum_rodenja">Születési idő:</string>
+    <string name="dalje">További</string>
+    <string name="predmet">Tantárgy:</string>
+    <string name="profesor">Egyetemi tanár:</string>
+    <string name="akademska_godina">Tanév:</string>
+    <string name="sati_predavanja">Előadások órája:</string>
+    <string name="sati_labosa">Órák gyakorlat:</string>
+    <string name="pocetna">Otthon</string>
+</resources>
