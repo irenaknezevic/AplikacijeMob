@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    List<String> dataList;
+    List<Student> dataList;
 
-    public MyRecyclerAdapter(List<String> myDataset) {
+    public MyRecyclerAdapter(List<Student> myDataset) {
         dataList = myDataset;
     }
 
@@ -22,13 +22,14 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         TextView view = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista, parent, false);
-        return new MyViewHolder(view);
+        return new StudentViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        MyViewHolder myViewHolder = (MyViewHolder) holder;
-        myViewHolder.customTextView.setText(dataList.get(position));
+        StudentViewHolder myViewHolder = (StudentViewHolder) holder;
+        myViewHolder.customTextView.setText(dataList.get(position).sIme);
+
     }
 
     @Override
@@ -41,9 +42,9 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         return super.getItemViewType(position);
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    class StudentViewHolder extends RecyclerView.ViewHolder {
         TextView customTextView;
-        public MyViewHolder(@NonNull View itemView) {
+        public StudentViewHolder(@NonNull View itemView) {
             super(itemView);
             customTextView = itemView.findViewById(R.id.tvHolder);
         }

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        //mAdapter = new MyRecyclerAdapter(MyDataStorage);
+        mAdapter = new MyRecyclerAdapter(MyDataStorage.getInstance().getStudents());
         mRecyclerView.setAdapter(mAdapter);
 
         final Button button = (Button)findViewById(R.id.dalje);

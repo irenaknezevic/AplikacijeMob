@@ -31,9 +31,9 @@ public class MyDataStorage {
 }
 
 class Student {
-    private String sIme;
-    private String sPrezime;
-    private String sPredmet;
+    public String sIme;
+    public String sPrezime;
+    public String sPredmet;
 
     public Student(String ime, String prezime, String predmet) {
         this.sIme = ime;
