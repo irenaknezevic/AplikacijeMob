@@ -8,7 +8,11 @@ public class MyDataStorage {
     private List<Student> students;
 
     private MyDataStorage() {
+        Student s = new Student("Irena", "Knezevic", "PMA");
+
         students = new ArrayList<>();
+
+        students.add(s);
     }
 
     static private MyDataStorage instance;
@@ -20,12 +24,12 @@ public class MyDataStorage {
         return instance;
     }
 
-    List<Student> getStudents() {
+    public List<Student> getStudents() {
 
         return students;
     }
 
-    void addStudent(Student newStudent) {
+    public void addStudent(Student newStudent) {
         students.add(newStudent);
     }
 }

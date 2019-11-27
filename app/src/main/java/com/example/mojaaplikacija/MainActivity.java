@@ -2,6 +2,8 @@ package com.example.mojaaplikacija;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -12,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+        initRV();
 
         final Button button = (Button)findViewById(R.id.dalje);
 
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public void setLocal(String jezik) {
         Locale loc = new Locale(jezik);
         Locale.setDefault(loc);
@@ -64,5 +69,14 @@ public class MainActivity extends AppCompatActivity {
         Configuration config = new Configuration();
         config.locale = loc;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+    }
+
+    private void initRV() {
+        MyDataStorage studenti = MyDataStorage.getInstance();
+        List<Student> listaStu = studenti.getStudents();
+        RecyclerView rv = findViewById(R.id.my_recycler_view);
+        MyRecyclerAdapter adapter = new MyRecyclerAdapter(listaStu);
+        rv.setAdapter(adapter);
+        rv.setLayoutManager(new LinearLayoutManager(this));
     }
 }

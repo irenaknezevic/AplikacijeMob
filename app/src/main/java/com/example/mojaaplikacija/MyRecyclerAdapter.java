@@ -21,15 +21,15 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        TextView view = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista, parent, false);
         return new StudentViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         StudentViewHolder myViewHolder = (StudentViewHolder) holder;
-        myViewHolder.customTextView.setText(dataList.get(position).sIme);
-
+        myViewHolder.tvStudent.setText(dataList.get(position).sIme + " " + dataList.get(position).sPrezime);
+        myViewHolder.tvPredmet.setText(dataList.get(position).sPredmet);
     }
 
     @Override
@@ -43,10 +43,12 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     class StudentViewHolder extends RecyclerView.ViewHolder {
-        TextView customTextView;
+        TextView tvStudent;
+        TextView tvPredmet;
         public StudentViewHolder(@NonNull View itemView) {
             super(itemView);
-            customTextView = itemView.findViewById(R.id.tvHolder);
+            tvStudent = itemView.findViewById(R.id.tvImePrezime);
+            tvPredmet = itemView.findViewById(R.id.tvPredmet);
         }
     }
 }
