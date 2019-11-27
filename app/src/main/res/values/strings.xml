@@ -10,6 +10,7 @@
     <string name="sati_predavanja">Sati predavanja:</string>
     <string name="sati_labosa">Sati labosa:</string>
     <string name="pocetna">Početna</string>
+    <string name="dodavanje">Dodaj</string>
 
     <string-array name="jezik">
         <item name="hr">Hrvatski (hr)</item>

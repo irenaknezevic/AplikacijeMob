@@ -2,8 +2,6 @@ package com.example.mojaaplikacija;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -18,26 +16,16 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         Spinner spinner = (Spinner)findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.jezik, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new MyRecyclerAdapter(MyDataStorage.getInstance().getStudents());
-        mRecyclerView.setAdapter(mAdapter);
 
         final Button button = (Button)findViewById(R.id.dalje);
 
@@ -69,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     public void setLocal(String jezik) {
         Locale loc = new Locale(jezik);
         Locale.setDefault(loc);
