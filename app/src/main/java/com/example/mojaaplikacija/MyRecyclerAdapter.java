@@ -28,7 +28,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         StudentViewHolder myViewHolder = (StudentViewHolder) holder;
-        myViewHolder.tvStudent.setText(dataList.get(position).sIme + " " + dataList.get(position).sPrezime);
+        myViewHolder.tvStudent.setText(dataList.get(position).sIme + " " + dataList.get(position).sPrezime + "  ");
         myViewHolder.tvPredmet.setText(dataList.get(position).sPredmet);
     }
 
@@ -39,6 +39,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public int getItemViewType(int position) {
+
         return super.getItemViewType(position);
     }
 
