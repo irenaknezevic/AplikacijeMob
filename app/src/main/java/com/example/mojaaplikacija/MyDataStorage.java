@@ -5,14 +5,11 @@ import java.util.List;
 
 public class MyDataStorage {
 
-    private List<Student> students;
+    private List<Object> students;
 
     private MyDataStorage() {
-        Student s = new Student("Irena", "Knezevic", "PMA");
-
         students = new ArrayList<>();
-
-        students.add(s);
+        students.add("STUDENTI");
     }
 
     static private MyDataStorage instance;
@@ -24,8 +21,7 @@ public class MyDataStorage {
         return instance;
     }
 
-    public List<Student> getStudents() {
-
+    public List<Object> getStudents() {
         return students;
     }
 

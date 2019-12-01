@@ -43,6 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/dalje" />
+        android:text="@string/dalje"
+        android:theme="@style/ButtonStyle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/slika"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:theme="@style/TextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/predmet"
@@ -44,7 +45,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/profesor"/>
+        android:text="@string/profesor"
+        style="@style/TextViewStyle"/>
 
     <EditText
         android:id="@+id/profIme"
@@ -54,7 +56,7 @@
         app:layout_constraintStart_toEndOf="@+id/prof"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="16dp"
-        android:text=""/>
+        android:theme="@style/TextInputLayoutStyle"/>
 
     <TextView
         android:id="@+id/akGod"
@@ -66,7 +68,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/akademska_godina"/>
+        android:text="@string/akademska_godina"
+        style="@style/TextViewStyle"/>
 
     <EditText
         android:id="@+id/editAkGod"
@@ -76,7 +79,7 @@
         app:layout_constraintStart_toEndOf="@+id/akGod"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="16dp"
-        android:text=""/>
+        android:theme="@style/TextInputLayoutStyle"/>
 
     <TextView
         android:id="@+id/tvSatiPredavanja"
@@ -88,7 +91,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/sati_predavanja" />
+        android:text="@string/sati_predavanja"
+        style="@style/TextViewStyle"/>
 
     <EditText
         android:id="@+id/etSatiPredavanja"
@@ -98,7 +102,7 @@
         app:layout_constraintStart_toEndOf="@+id/tvSatiPredavanja"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="16dp"
-        android:text=""/>
+        android:theme="@style/TextInputLayoutStyle"/>
 
     <TextView
         android:id="@+id/tvSatiLv"
@@ -110,7 +114,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/sati_labosa"/>
+        android:text="@string/sati_labosa"
+        style="@style/TextViewStyle"/>
 
     <EditText
         android:id="@+id/etSatiLv"
@@ -120,7 +125,7 @@
         app:layout_constraintStart_toEndOf="@+id/tvSatiLv"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="16dp"
-        android:text=""/>
+        android:theme="@style/TextInputLayoutStyle"/>
 
 
     <Button

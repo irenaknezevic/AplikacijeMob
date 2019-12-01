@@ -25,7 +25,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textInputPrezime"
         android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp">
+        android:layout_marginLeft="16dp"
+        android:theme="@style/TextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ime"
@@ -45,7 +46,8 @@
         app:layout_constraintStart_toEndOf="@+id/textInputIme"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp" >
+        android:layout_marginRight="16dp"
+        android:theme="@style/TextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/prezime"
@@ -53,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:hint="@string/prezime" />
+            android:hint="@string/prezime"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,7 +76,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/datum_rodenja"/>
+        android:text="@string/datum_rodenja"
+        style="@style/TextViewStyle"/>
 
     <EditText
         android:id="@+id/etUnos"
@@ -83,7 +86,8 @@
         app:layout_constraintTop_toBottomOf="@+id/linija1"
         app:layout_constraintStart_toEndOf="@+id/tvDatumRodenja"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="16dp"/>
+        android:layout_marginRight="16dp"
+        android:theme="@style/TextInputLayoutStyle"/>
 
     <View
         android:id="@+id/linija2"

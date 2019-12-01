@@ -28,7 +28,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/ime" />
+        android:text="@string/ime"
+        style="@style/TextViewStyle"/>
 
 
     <TextView
@@ -41,7 +42,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle"/>
 
     <TextView
         android:id="@+id/tvPrezime"
@@ -53,7 +54,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/prezime" />
+        android:text="@string/prezime"
+        style="@style/TextViewStyle"/>
 
 
     <TextView
@@ -66,7 +68,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle" />
 
     <TextView
         android:id="@+id/tvDatum"
@@ -78,7 +80,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/datum_rodenja" />
+        android:text="@string/datum_rodenja"
+        style="@style/TextViewStyle"/>
 
     <TextView
         android:id="@+id/mojeRodenje"
@@ -90,7 +93,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle" />
 
     <TextView
         android:id="@+id/tvPredmet"
@@ -102,7 +105,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/predmet" />
+        android:text="@string/predmet"
+        style="@style/TextViewStyle"/>
 
     <TextView
         android:id="@+id/predmet"
@@ -114,7 +118,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle" />
 
     <TextView
         android:id="@+id/tvProfesor"
@@ -126,7 +130,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/profesor" />
+        android:text="@string/profesor"
+        style="@style/TextViewStyle"/>
 
     <TextView
         android:id="@+id/imeProfesora"
@@ -138,7 +143,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle" />
 
     <TextView
         android:id="@+id/tvAkGodina"
@@ -150,7 +155,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/akademska_godina" />
+        android:text="@string/akademska_godina"
+        style="@style/TextViewStyle"/>
 
     <TextView
         android:id="@+id/akademskaGod"
@@ -162,7 +168,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle" />
 
     <TextView
         android:id="@+id/tvBrPredavanja"
@@ -174,7 +180,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/sati_predavanja" />
+        android:text="@string/sati_predavanja"
+        style="@style/TextViewStyle"/>
 
     <TextView
         android:id="@+id/brojPredavanja"
@@ -186,7 +193,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle" />
 
     <TextView
         android:id="@+id/tvBrLv"
@@ -198,7 +205,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/sati_labosa" />
+        android:text="@string/sati_labosa"
+        style="@style/TextViewStyle"/>
 
     <TextView
         android:id="@+id/brojLv"
@@ -210,7 +218,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:text="" />
+        style="@style/TextViewStyle" />
 
     <Button
         android:id="@+id/buttonPocetna"

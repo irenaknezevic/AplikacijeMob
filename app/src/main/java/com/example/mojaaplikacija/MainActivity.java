@@ -14,24 +14,31 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ArrayList<String> studentiArray = new ArrayList<>();
+    private ArrayList<String> predmetiArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final Button button = (Button)findViewById(R.id.dalje);
+
+        ActionBar aBar = getSupportActionBar();
+        aBar.setTitle(getResources().getString(R.string.app_name));
+
+        initRV();
+
         Spinner spinner = (Spinner)findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.jezik, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-        initRV();
-
-        final Button button = (Button)findViewById(R.id.dalje);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -41,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
                 setLocal(local);
 
-                ActionBar naziv = getSupportActionBar();
-                naziv.setTitle(R.string.app_name);
+                ActionBar aBar = getSupportActionBar();
+                aBar.setTitle(getResources().getString(R.string.app_name));
 
-                button.setText(R.string.dalje);
+                button.setText(getResources().getString(R.string.dalje));
             }
 
             @Override
@@ -73,9 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRV() {
         MyDataStorage studenti = MyDataStorage.getInstance();
-        List<Student> listaStu = studenti.getStudents();
+        List<Object> lista = studenti.getStudents();
+
         RecyclerView rv = findViewById(R.id.my_recycler_view);
-        MyRecyclerAdapter adapter = new MyRecyclerAdapter(listaStu);
+        MyRecyclerAdapter adapter = new MyRecyclerAdapter(lista);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this));
     }
