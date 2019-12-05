@@ -7,8 +7,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import org.w3c.dom.Text;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
