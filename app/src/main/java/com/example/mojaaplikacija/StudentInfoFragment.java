@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +15,13 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-public class StudentInfoFragment extends Fragment {
+public class StudentInfoFragment extends Fragment implements Callback<CourseResponse> {
+
+    CourseResponse courses = new CourseResponse();
 
     TextInputEditText oInputPredmet;
     EditText oEditTextProf;
@@ -24,7 +30,6 @@ public class StudentInfoFragment extends Fragment {
     EditText oEditTextBrLv;
     String predmet, imeProf, akGod, satiPred, satiLV;
     StudentInfoListener studentInfoListener;
-
 
     public interface StudentInfoListener {
         void onStudentInfoSent(String predmet, String imeProf, String akGod, String satiPred, String satiLV);
@@ -47,8 +52,32 @@ public class StudentInfoFragment extends Fragment {
         oEditTextBrPredavanja.addTextChangedListener(personalWatcher);
         oEditTextBrLv.addTextChangedListener(personalWatcher);
 
+        //asinkroni poziv
+        ApiManager.getInstance().service().getCourses().enqueue(this);
+
         return view;
     }
+
+
+    //LV5
+    @Override
+    public void onResponse(@NonNull Call<CourseResponse> call, @NonNull Response<CourseResponse> response) {
+        if(response.isSuccessful() && response.body()!=null) {
+            courses = response.body();
+            printCourses(courses);
+        }
+    }
+
+    @Override
+    public void onFailure(Call<CourseResponse> call, Throwable t) {
+        t.printStackTrace();
+    }
+
+    private void printCourses(CourseResponse courses) {
+        String TAG = "apiCall";
+        Log.d(TAG, "printCourses: " + courses.toString());
+    }
+    // LV5
 
     private TextWatcher personalWatcher = new TextWatcher() {
         @Override
