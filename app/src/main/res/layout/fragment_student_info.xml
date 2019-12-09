@@ -17,52 +17,35 @@
         android:contentDescription="profilna"
         android:src="@drawable/profilnarac" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPredmet"
+
+    <Spinner
+        android:id="@+id/spinnerPredmet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/slika"
-        android:layout_marginTop="16dp"
-        android:theme="@style/TextInputLayoutStyle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/predmet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:hint="@string/predmet" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/prof"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textInputPredmet"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/profIme"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/profesor"
-        style="@style/TextViewStyle"/>
-
-    <EditText
-        android:id="@+id/profIme"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textInputPredmet"
-        app:layout_constraintStart_toEndOf="@+id/prof"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="16dp"
-        android:theme="@style/TextInputLayoutStyle"/>
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerProfesor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPredmet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"/>
+
 
     <TextView
         android:id="@+id/akGod"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/prof"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerProfesor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editAkGod"
         android:layout_marginLeft="16dp"
@@ -75,7 +58,7 @@
         android:id="@+id/editAkGod"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/prof"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerProfesor"
         app:layout_constraintStart_toEndOf="@+id/akGod"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="16dp"
